@@ -3,14 +3,6 @@ const createError = require('http-errors');
 const FileService = require('@/services/file.service');
 
 
-const Landing = (req, res, next) => {
-  return res.json({
-    message: `Welcome ${config.APP_TITLE} V1`,
-    payload: null,
-    error: null
-  })
-}
-
 
 const GetUsers = async (req,res,next) => {
   try {
@@ -26,7 +18,7 @@ const GetUsers = async (req,res,next) => {
   }
 }
 
+
 module.exports = {
-  Landing,
   GetUsers,
 }

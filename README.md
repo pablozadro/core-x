@@ -4,21 +4,24 @@
 ## Getting Started
 
 Install dependencies:
-
 ```bash
 npm install
 ```
 
-Setup environment:
+Setup environment in file `.env`.
 
+Run server:
 ```bash
-cp .env.example .env
+npm run serve:dev
+npm run serve:prod
 ```
 
 
-Run server:
+## Commands
 
 ```bash
 npm run serve:dev
 npm run serve:prod
+
+npm run env:create
 ```

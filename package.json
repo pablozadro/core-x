@@ -7,8 +7,11 @@
     "@": "./src"
   },
   "scripts": {
+    "postinstall": "npm run env:create",
+    "start": "npm run serve:dev",
     "serve:dev": "set NODE_ENV=development&&set DEBUG=core-x:*&&nodemon ./src/index",
-    "serve:prod": "set NODE_ENV=production&&node ./src/index"
+    "serve:prod": "set NODE_ENV=production&&node ./src/index",
+    "env:create": "cp .env.example .env"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
