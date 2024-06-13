@@ -1,12 +1,20 @@
-const config = require('@/config');
 const createError = require('http-errors');
-const FileService = require('@/services/file.service');
+const config = require('@/config');
+const DataService = require('@/core/services/data.service');
 
+
+const Landing = (req, res, next) => {
+  return res.json({
+    message: `Welcome ${config.APP_TITLE} V1`,
+    payload: {},
+    error: null
+  })
+}
 
 
 const GetUsers = async (req,res,next) => {
   try {
-    const users = await FileService.read('users');
+    const users = await DataService.read('users');
     res.json({
       message: 'Users fetched successfully.',
       payload: { users },
@@ -19,6 +27,8 @@ const GetUsers = async (req,res,next) => {
 }
 
 
+
 module.exports = {
+  Landing,
   GetUsers,
 }

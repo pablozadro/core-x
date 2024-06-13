@@ -1,10 +1,9 @@
-const createError = require('http-errors');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
-const router = require('@/router');
-const errorMiddleware = require('@/middlewares/error.middleware');
+const router = require('@/app.router');
+const errorMiddleware = require('@/core/middlewares/error.middleware');
 
 
 /**
