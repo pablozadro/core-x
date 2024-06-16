@@ -34,3 +34,10 @@ npm run serve:prod
 
 npm run env:create
 ```
+
+
+## Generate Data
+
+```bash
+npm run generate:users
+```
