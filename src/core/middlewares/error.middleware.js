@@ -11,7 +11,6 @@ module.exports = [
     const cause = error.cause || null;
 
     return res.status(status).json({
-      message: 'Core-X API Error',
       payload: null,
       error: {
         status,

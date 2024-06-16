@@ -11,7 +11,7 @@ const config = require('@/config');
  * App
  */
 
-const port = normalizePort(config.PORT);
+const port = normalizePort(config.port);
 app.set('port', port);
 
 const server = http.createServer(app);

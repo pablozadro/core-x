@@ -4,6 +4,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const router = require('@/app.router');
 const errorMiddleware = require('@/core/middlewares/error.middleware');
+const throttlingMiddleware = require('@/core/middlewares/throttling.middleware')
 
 
 /**
@@ -18,12 +19,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
-
 /**
  * Router & Middlewares
  */
+app.use(throttlingMiddleware)
+app.use(router);
+app.use(errorMiddleware);
 
-app.use('/api/v1', router);
-app.use('/api/v1', errorMiddleware);
 
 module.exports = app;

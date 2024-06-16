@@ -1,3 +1,7 @@
 module.exports = Object.freeze({
-  PORT: 9001
+  port: 9001,
+  throttling: {
+    min: 750,
+    max: 3000,
+  },
 })
