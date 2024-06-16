@@ -12,7 +12,7 @@
     "serve:dev": "set NODE_ENV=development&&set DEBUG=core-x:*&&nodemon ./src/index",
     "serve:prod": "set NODE_ENV=production&&node ./src/index",
     "env:create": "cp .env.example .env",
-    "generate:users": "node scripts/generate --model=user --size=10"
+    "generate:users": "node generate/index --model=user --size=10"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
